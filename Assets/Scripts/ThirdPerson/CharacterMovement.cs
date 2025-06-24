@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour
         PlayerInputSingleton.Instance.Actions["Interact"].started += OnInteractStarted;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         PlayerInputSingleton.Instance.Actions["Move"].performed -= OnMoveInput;
         PlayerInputSingleton.Instance.Actions["Sprint"].started -= OnSprintStart;
